@@ -1,0 +1,17 @@
+<template>
+    <v-row>
+        <v-col>
+            <div>
+                <v-btn
+                large
+                @click="createBtnClicked()"
+                >
+                Add
+                </v-btn>
+                <app-item-dialog
+                :value="isOverlaied" 
+                @overlayClosed="changeOverlayState"
+                >
+                </app-item-dialog>
+            </div>
+        </v-col
