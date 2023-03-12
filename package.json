@@ -23,3 +23,20 @@
     "fibers": "^4.0.2",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
+    "rimraf": "^3.0.0",
+    "sass": "^1.23.7",
+    "sass-loader": "^8.0.0",
+    "vue-loader": "^15.7.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "vue": "^2.6.10",
+    "vuetify": "^2.1.11",
+    "vuetify-loader": "^1.3.1"
+  }
+}
