@@ -14,4 +14,33 @@
                 >
                 </app-item-dialog>
             </div>
-        </v-col
+        </v-col>
+    </v-row>
+</template>
+
+<script>
+import ItemDialog from '../fixed/ItemDialog.vue';
+export default {
+    components: {
+        'app-item-dialog': ItemDialog
+    },
+    data() {
+        return {
+            isOverlaied: false
+        }
+    },
+    methods: {
+        createBtnClicked(){
+            this.isOverlaied = true;
+        },
+        changeOverlayState(){
+            this.isOverlaied = false;
+        }
+    },
+
+}
+</script>
+
+<style>
+
+</style>
