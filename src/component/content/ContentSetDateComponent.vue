@@ -30,4 +30,29 @@
                 <!-- DELETE-->
                 <v-col 
                 cols="1"
-  
+                class="ml-n4"
+                >
+                    <v-btn
+                    block
+                    text
+                    @click="deleteBtnClicked(item.idx)"
+                    >
+                        <v-icon>
+                        {{ mdiDelete }}
+                        </v-icon>
+                    </v-btn>
+                </v-col>
+            </v-row>
+        </v-card>
+    </v-container>
+</template>
+
+<script>
+import eventBus from '../../utils/eventBus.js';
+import { mdiDelete } from '@mdi/js';
+import { getDateListStore, removeDateItem } from '../../utils/dataStore.js';
+
+export default {
+    data(){
+        return {
+            mdiDelete: mdiDelet
