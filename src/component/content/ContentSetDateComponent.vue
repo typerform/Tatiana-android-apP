@@ -55,4 +55,25 @@ import { getDateListStore, removeDateItem } from '../../utils/dataStore.js';
 export default {
     data(){
         return {
-            mdiDelete: mdiDelet
+            mdiDelete: mdiDelete,
+            items: []
+        }
+    },
+    mounted() {
+        this.changeItems(getDateListStore());
+        eventBus.$on("dateItemAdded", this.changeItems);
+    },
+    methods: {
+        deleteBtnClicked: function(idx){
+            this.items = removeDateItem(idx);
+            eventBus.$emit("setSnackBar", { text: 'Date Range Item Removed Successfully!', component: 'date', idx: idx })
+        },
+        changeItems: function(list){
+            this.items = list;
+        }
+    },
+}
+</script>
+
+<style>
+</style>
