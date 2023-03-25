@@ -229,3 +229,28 @@ export default {
             }else {
                 eventBus.$emit("setSnackBar", { text: 'Failed to add Item' });
             }
+        },
+        closeBtnClicked: function(){
+            this.$emit("overlayClosed");  
+        },
+        todayChecked: function(isChecked){
+            this.startDate = isChecked ? new Date().toISOString().substr(0, 10) : '';
+            this.endDate = isChecked ? new Date().toISOString().substr(0, 10) : '';
+        },
+        allowedDates: function(val){
+            return this.startDate <= val
+        },
+        changeDate: function(){
+            if(this.startDate === this.endDate){
+                this.checkbox = true;
+            }else{
+                this.checkbox = false;
+            }
+        }
+    },
+}
+</script>
+
+<style>
+
+</style>
