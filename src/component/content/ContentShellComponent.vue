@@ -32,4 +32,21 @@ export default {
     mounted() {
         eventBus.$on("getContentIndex", this.changeContentIdx);
     },
- 
+    methods: {
+        changeContentIdx: function(idx){
+            this.componentIdx = idx;
+            eventBus.$emit("passIdxToCreateBtn", this.componentIdx);
+        }
+    },
+    computed: {
+        componentInstance() {
+            const name = this.componentIdx == 0 ? 'ContentMainComponent' : 'ContentSetDateComponent';
+            return () => import(`./${name}.vue`);
+        }
+    },
+}
+</script>
+
+<style>
+
+</style>
