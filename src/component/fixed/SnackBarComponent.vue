@@ -28,4 +28,14 @@ export default {
         eventBus.$on("setSnackBar", this.changeSnack);
     },
     methods: {
-        changeSnack: function(optio
+        changeSnack: function(options){
+            this.text = options.text;
+            this.show = true;
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>
