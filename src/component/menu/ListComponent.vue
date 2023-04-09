@@ -33,4 +33,22 @@ export default {
                     icon : mdiPlaylistEdit
                 },
                 {
-           
+                    title : "THE DATE RANGE",
+                    subtitle: "WORKS DATE RANGE",
+                    icon : mdiCalendarRange
+                }
+            ]
+        }
+    },
+
+    methods: {
+        vItemTouched: function (i) {
+            eventBus.$emit("getContentIndex", i);
+        }
+    },
+}
+</script>
+
+<style>
+
+</style>
