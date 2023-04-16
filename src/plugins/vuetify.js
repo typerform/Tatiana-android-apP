@@ -3,4 +3,11 @@ import Vuetify from "vuetify/lib";
 
 
 const opts = {
-    ico
+    icons: {
+        iconfont: 'mdiSvg'
+    }
+};
+
+Vue.use(Vuetify);
+
+export default new Vuetify(opts)
