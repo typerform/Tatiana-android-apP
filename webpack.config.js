@@ -1,0 +1,1 @@
+const VueLoaderPlugin = require("vue-loader/lib/p

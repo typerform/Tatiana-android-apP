@@ -27,4 +27,19 @@ function addItem(item){
         isChecked: false,
         textState: true,
         color: 'white',
-      
+        icon: mdiCheck,
+        iconColor: 'white',
+        content: item.content,
+        idx: chkListStore.length+1
+    });
+    dateListStore.push({
+        startDate: item.startDate,
+        endDate: item.endDate,
+        content: item.content,
+        idx: dateListStore.length+1
+    });
+    eventBus.$emit("chkItemAdded", getChkListStore());
+    eventBus.$emit("dateItemAdded", getDateListStore());
+}
+
+export {getChkListStore, getDateListStore, addItem, removeChkItem, removeDateItem};
