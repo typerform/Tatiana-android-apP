@@ -19,4 +19,21 @@ module.exports = {
                             plugins: ['@babel/plugin-syntax-dynamic-import']
                         }
                     }
-         
+                ]
+            },
+            { test : /\.vue$/, loader : 'vue-loader' },
+            { test : /\.css$/, loader : [ MiniCssExtractPlugin.loader, 'css-loader' ] },
+            {
+                test: /\.s(c|a)ss$/,
+                use: [
+                  'vue-style-loader',
+                  'css-loader',
+                  {
+                    loader: 'sass-loader',
+                    options: {
+                      implementation: require('sass'),
+                      fiber: require('fibers'),
+                      indentedSyntax: true
+                    },
+                    options: {
+                      implementation: req
