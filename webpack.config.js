@@ -36,4 +36,29 @@ module.exports = {
                       indentedSyntax: true
                     },
                     options: {
-                      implementation: req
+                      implementation: require('sass'),
+                      sassOptions: {
+                        fiber: require('fibers'),
+                        indentedSyntax: true
+                      },
+                    },
+                  },
+                ],
+              }
+        ]
+    },
+    devServer : {
+        open: true,
+        hot: true
+    },
+    plugins : [
+        new VueLoaderPlugin(),
+        new VuetifyLoaderPlugin(),
+        new HtmlWebPackPlugin({
+            template: './src/index.html',
+            favicon: 'favicon.png'
+        }),
+        new MiniCssExtractPlugin({"filename":"style.css"}),
+        new webpack.HotModuleReplacementPlugin()
+    ]
+}
